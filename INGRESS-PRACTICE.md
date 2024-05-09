@@ -8,11 +8,19 @@
 
 **1.Ingress Controller**: Kubernetes itself doesn't implement the actual features of the Ingress. Instead, it relies on an Ingress controller, which is a daemon that runs within the cluster. The Ingress controller is responsible for actually implementing the rules specified in the Ingress resources.
 
-**Ingress Resource**: This is where you define how you want incoming traffic to be routed to your services. It specifies rules like hostnames, paths, and backend services to which requests should be forwarded.
+Popular Ingress controllers include LOAD-BALANCER(GCE),NGINX Ingress Controller, Traefik, and HAProxy Ingress.Out of these LOAD-BALANCER(GCE) and nginx ingress conttroller is is mostly used.
 
-**Backend Services**: These are the services running within your Kubernetes cluster that you want to expose to the outside world. The Ingress resource forwards incoming requests to these backend services based on the defined rules.
+<image src="./images/1.png" width="600">
 
-**Load Balancing and SSL Termination**: Ingress controllers often integrate with cloud providers' load balancers or provide their own load balancing mechanisms to distribute traffic among backend services. They can also handle SSL termination, decrypting incoming HTTPS traffic before forwarding it to backend services.
+#### NGINX-INGRESS-CONTROLLER:
+
+NGINX Ingress Controller: NGINX is a widely used web server and reverse proxy server. The NGINX Ingress Controller extends its functionality to manage external access to services in Kubernetes clusters. It's known for its robustness, performance, and flexibility in handling HTTP, HTTPS, and TCP traffic.
+
+**2.Ingress Resource**: This is where you define how you want incoming traffic to be routed to your services. It specifies rules like hostnames, paths, and backend services to which requests should be forwarded.
+
+**3.Backend Services**: These are the services running within your Kubernetes cluster that you want to expose to the outside world. The Ingress resource forwards incoming requests to these backend services based on the defined rules.
+
+**4.Load Balancing and SSL Termination**: Ingress controllers often integrate with cloud providers' load balancers or provide their own load balancing mechanisms to distribute traffic among backend services. They can also handle SSL termination, decrypting incoming HTTPS traffic before forwarding it to backend services.
 
 ## Steps to run this project locally
 
