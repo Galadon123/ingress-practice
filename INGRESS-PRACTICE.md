@@ -36,45 +36,45 @@ git clone https://github.com/Galadon123/ingress-practice.git
 
 definition file for server1 and server2:
 
-``
+```
 kubectl apply -f deployment1.yaml
-``
+```
 
-``
+```
 kubectl apply -f deployment2.yaml
-``
+```
 
 > **Please wait momentarily as the image is being pulled from Docker Hub and the deployment is initiated, ensuring it is running seamlessly.**
 
 Service definition file for server1 and server2
 
-``
+```
 kubectl apply -f svc1.yaml
-``
+```
 
-``
+```
 kubectl apply -f svc2.yaml
-``
+```
 
 Definition file for nginx-ingress-controller and nginx-ingress service and nginx-configuration
 
-``
+```
 kubectl apply -f nginx-deploy.yaml
-``
+```
 
-``
+```
 kubectl apply -f svc.yaml
-``
+```
 
-``
+```
 kubectl apply -f configmap.yaml
-``
+```
 
 Definition file for sepcifing backend services
 
-``
+```
 kubectl apply -f ingress-resources.yaml
-``
+```
 
 **3.Accressing the Service from outside the cluster.**
 
@@ -86,9 +86,9 @@ kubectl apply -f ingress-resources.yaml
  
 To access our implementd ingress implentation run minikube tunnel in you machine by using this command
 
-``
+```
 minikube tunnel
-``
+```
 
 To access server1 and server2 from local browser use http://127.0.0.1/server1 , http://127.0.0.1/server2
 
